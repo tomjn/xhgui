@@ -76,7 +76,7 @@ class ServiceContainer extends Container
             ]));
 
             // Add renderer.
-            $app->add(new RenderMiddleware());
+            $app->add(new RenderMiddleware($app));
 
             $view = $c['view'];
             $view->parserExtensions = [
